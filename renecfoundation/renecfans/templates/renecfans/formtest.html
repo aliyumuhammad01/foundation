@@ -1,0 +1,41 @@
+{% extends "renecfans/layout.html" %}
+
+    {% block title %} 
+    contact us
+    {% endblock %}
+    {% block body %}
+        <div id="container">
+            <div class="page-header">
+                <h1><span class="glyphicon glyphicon-phone-alt">&nbsp;</span>feedback form</h1>
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">account</a></li>
+                    <li><a  class="active">tasks</a></li>
+                </ul>
+            </div>
+
+            <form class="form-horizontal " >
+                <div class="form-group">
+                    <label for="yourName"  class="col-sm-3 control-label">Name</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+    
+                            <span class="input-group-addon glyphicon glyphicon-user"></span>
+                            <input type="text" id="yourName" class="form-control" placeholder="Your name please">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label " for="yourEmail">Email</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-email">@</span>
+                        <input id="yourEmail" class="from-control" placeholder="You Email">
+                </div>
+                
+                </div>
+                </div>
+            </form>
+
+        </div>
+    {% endblock %}

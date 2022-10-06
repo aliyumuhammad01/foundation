@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head lang="en">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    
+    <script src="{% static 'js/jquery.js' %}" ></script>
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+    {%  block title %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+{% block body %}
+<body>
+        {% block banner %}
+        <div class="page-header" style="background-color: rebeccapurple;"><h2 style="color:whitesmoke"><span class="glyphicon glyphicon-home"></span>&nbsp;Welcome to Renec Community foundation Nigeria</h2></div>
+            {% endblock %}
+            {% block user %}
+                {% if message %}
+                <h3>  {{message}}</h3>
+                {% endif %}
+            {% endblock %}
+        {% block statisctics %}
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Members States</div>
+                    <div class="panel-body">
+                        <h1 style="font-size:large; color: blue; font-style: oblique;" > {{States}} States including FCT </h1> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">members per state</div>
+                    <div class="panel-body">
+                        <h1 style="font-size:large; color: blue; font-style: oblique;" >{{members}} and counting</h1>
+            
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Top 5 Most active states</div>
+                        <div class="panel-body">
+                            
+                        </div>
+                </div>
+            </div>
+            {% endblock %}
+            
+        </div>
+        {% block logout %}
+        
+        <a href = "{% url 'logout' %}">Logout here</a>
+        
+        {% endblock %}
+    {% block footer %}
+    <div id="footer">
+            <div class="text-muted pull-left"><a href="https://www.youtube.com/channel/UCLZpl52IjHMh0mW7usFjh-w" target="_blank">@aliyumuhammad</a>&reg; on youTube</a></div>
+            <div class="text-muted pull-right">&copy; <a href="https://twitter.come/aliyumuhammad03" target="_blank">Aliyu Yusuf</a> 2022</div>
+        
+    </div>
+    {% endblock %}
+    
+    
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "renecfans/layout.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Contat Us</title>
+{% endblock %}
+{% block banner %}    
+        <div class="container">
+            <div class="page-header"><h1><span class="glyphicon glyphicon-phone-alt"></span>&nbsp; We will love to heare from you</h1></div>
+            <form class="form-horizontal">
+                {% csrf_token %}
+                <div class="form-group">
+                <label for="yourName" class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                <input type="text" class="form-control" id="yourName" placeholder="Your name please">
+                </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="yourEmail" class="col-sm-3 control-label">Email address</label>
+                <div class="col-sm-9">
+                <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="email" class="form-control" id="yourEmail"placeholder="Your Email Id">
+                </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="yourComments" class="col-sm-3 control-label">Tell us</label>
+                <div class="col-sm-9">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-comment"></span>
+                        <textarea class="form-control" id="yourComments" placeholder="Your commments" rows="3"></textarea>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                        <label><input type="checkbox">Subscribe !!!</label>
+                        </div>
+                        </div>
+                        <div class="clearfix">&nbsp;</div>
+                        <div class="col-sm-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg"><span
+                        class="glyphicon glyphicon-envelope"></span>&nbsp;Post It</button>
+                        </div>
+                        </form>
+        </div>
+        {% endblock %}
+        {% block statisctics %}
+        {% endblock %}
+    
